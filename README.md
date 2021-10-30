@@ -21,18 +21,25 @@
 - 데이터셋 설명 표 (명세서)
 - NAS 링크
 
-## 3. 유사도 지표
+## 3. 유사도 지표 (TODO)
 ### 영상 유사도 지표: 격자 기반 정렬
 - 영상을 격자로 분할
 - 각 격자 내에서 픽셀 값 분포의 (1 - D-statistic) 계산
 - 평균을 통해 최종 유사도 산출
 
 <p align="center">
-  <img src="images/ground_truth.png" width=80% height=80%>
+  <img src="images/ground_truth.PNG" width=50% height=50%>
 </p>
 
+### 예시
+- 예시 넣기
+
 ### 실행 방법
-- 실행 방법 설명
+- 격자 개수(**N**)과 픽셀 분포의 구간 개수(**B**)를 다음과 같이 설정하여, 다음과 같이 C++ 코드를 컴파일 및 실행:
+```
+컴파일: g++ -o run main.cpp 
+실행  : ./run 
+```
 
 ## 4. 전처리 (TODO)
 - 이미지 전처리 설명
