@@ -91,21 +91,13 @@ int main(int argc, char **argv)
     int N = stoi(argv[3]);
     int B = stoi(argv[4]);
     
-    cout << video_path_x << "\t" << video_path_y << endl;
-    cout << "N:\t" << N << "\t\tB:\t" << B << endl;
-    
     // Compute Video Similarities
     start = clock();
     int video_size = 20;
     
     double sim = get_video_sim(video_path_x, video_path_y, video_size, N, B);
     if (sim < 0) cout << "Similarity computation failed." << endl;
-    
-    cout << "Similarity:\t" << sim << endl;
-    
-    cout << "Runtime:\t" << (double)(clock() - start) / CLOCKS_PER_SEC << endl;
+    cout << sim << endl;
     
     return 0;
 }
-
-
