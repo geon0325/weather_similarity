@@ -6,9 +6,6 @@
 #include <numeric>
 #include <algorithm>
 #include <ctime>
-#include <thread>
-#include <tuple>
-#include <random>
 
 #include "Image.cpp"
 #include "Similarity.cpp"
