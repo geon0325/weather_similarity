@@ -12,26 +12,6 @@
 
 using namespace std;
 
-vector<string> split(string str, char delimiter)
-{
-    vector<string> internal;
-    stringstream ss(str);
-    string temp;
-    while (getline(ss, temp, delimiter)){
-        internal.push_back(temp);
-    }
-    return internal;
-}
-
-class image_set
-{
-    public:
-        string file_ir02;
-        string file_swir;
-        string file_ir01;
-        string file_wv;
-};
-
 double get_image_sim(string file_i, string file_j, int N, int B)
 {
     Image image_i(file_i);
