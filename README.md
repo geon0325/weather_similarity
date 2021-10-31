@@ -21,11 +21,13 @@
 - 데이터셋 설명 표 (명세서)
 - NAS 링크
 
-## 3. 유사도 지표 (TODO)
+## 3. 유사도 지표
 ### 영상 유사도 지표: 격자 기반 정렬
-- 영상을 격자로 분할
-- 각 격자 내에서 픽셀 값 분포의 (1 - D-statistic) 계산
-- 평균을 통해 최종 유사도 산출
+1. 이미지를 N x N 격자로 분할.
+2. 각 격자 내의 픽셀 값을 B개의 구간으로 나누어진 분포료 표현.
+3. 격자 간의 (1 - D-statistic) 계산하여 유사도 측정.
+4. 격자 간의 유사도 평균으로 이미지 간의 유사도 측정.
+5. 이미지 간의 유사도 평균으로 영상 간의 유사도 측정.
 
 <p align="center">
   <img src="images/ground_truth.PNG" width=50% height=50%>
@@ -43,10 +45,19 @@
 </p>
 
 ### 실행 방법
-- 격자 개수(**N**)과 픽셀 분포의 구간 개수(**B**)를 다음과 같이 설정하여, 다음과 같이 C++ 코드를 컴파일 및 실행:
+- [ground_truth](https://github.com/geonlee0325/weather_similarity/tree/main/ground_truth) 폴더에 있는 3개의 예시 영상 [video_1](https://github.com/geonlee0325/weather_similarity/tree/main/ground_truth/video_1), [video_2](https://github.com/geonlee0325/weather_similarity/tree/main/ground_truth/video_2), [video_3](https://github.com/geonlee0325/weather_similarity/tree/main/ground_truth/video_3) 참고
+- 격자 개수(**N**)과 픽셀 분포의 구간 개수(**B**)를 다음과 같이 설정하여, 다음과 같이 [main.cpp](https://github.com/geonlee0325/weather_similarity/tree/main/ground_truth/main.cpp) C++ 코드를 컴파일 및 실행:
 ```
 컴파일: g++ -o run main.cpp 
-실행  : ./run 
+실행  : ./run [Video1의 경로] [Video2의 경로] [격자개수 N] [분포구간개수 B]
+```
+- 실행 예시:
+```
+입력: ./run video_1 video_2 24 20
+출력: 0.807409
+
+입력: ./run video_1 video_3 24 20
+출력: 0.354187
 ```
 
 ## 4. 전처리 (TODO)
