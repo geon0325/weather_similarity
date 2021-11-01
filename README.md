@@ -31,6 +31,9 @@
 - 데이터셋 링크: NAS 링크
 
 - [데이터셋 분석](Analyze_COMS.ipynb)
+<p align="center">
+  <img src="images/관측주기_분포.PNG" width=50%>
+</p>
 
 ## 3. 유사도 지표
 ### 영상 유사도 지표: 격자 기반 정렬
