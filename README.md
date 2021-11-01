@@ -17,9 +17,20 @@
 - 실시간 영상 패턴 인식 및 위험 기상 사전 탐지 가능
 
 ## 2. 데이터셋 (TODO)
-- 샘플 이미지
-- 데이터셋 설명 표 (명세서)
-- NAS 링크
+
+- COMS 위성 이미지 예시:
+<p align="center">
+  <img src="raw_images/201103030645_image/coms_mi_le1b_ir01_ea040ps_201103030645.png" width=15% height=15%>
+  <img src="raw_images/201103030645_image/coms_mi_le1b_ir02_ea040ps_201103030645.png" width=15% height=15%>
+  <img src="raw_images/201103030645_image/coms_mi_le1b_swir_ea040ps_201103030645.png" width=15% height=15%>
+  <img src="raw_images/201103030645_image/coms_mi_le1b_wv_ea040ps_201103030645.png" width=15% height=15%>
+</p>
+
+- 데이터셋 설명 표:
+
+- 데이터셋 링크: NAS 링크
+
+- [데이터셋 분석](analyze_COMS.ipynb)
 
 ## 3. 유사도 지표
 ### 영상 유사도 지표: 격자 기반 정렬
