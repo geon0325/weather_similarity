@@ -154,6 +154,7 @@ python main.py --epochs 100 --dim 128 --learning_rate 1e-5 --batch_size 32 --vid
 ```
 - 실행 결과 1: 로그 저장로에 다음과 같이 학습 추이 기록
 ```
+기록 예시:
 epoch	1
 loss	0.6586444973945618
 runtime	5.312704086303711
@@ -161,9 +162,12 @@ runtime	5.312704086303711
 epoch	2
 loss	0.2081376053392887
 runtime	4.766304016113281
-...
 ```
 - 실행 결과 2: models 폴더에 학습된 모델 저장
+```
+모델 로드 예시:
+trained_model = torch.load(os.path.join('models', 'model_ep_100.pt'))
+```
 
 ### 실행 결과
 - 학습에 따른 **손실 (loss)** 변화
