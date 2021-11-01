@@ -66,6 +66,22 @@
 - 실행 방법 설명
 
 ## 5. 모델 학습 (TODO)
-- 모델 설명
-- 모델 실행 방법 설명
+### 심층 메트릭 학습을 통한 이미지 유사도 학습
+- 이미지 간의 유사도가 다차원 영상 벡터 간의 유사도에서 유지되도록 학습
+
+<p align="center">
+  <img src="images/model_1.PNG" width=60% height=60%>
+</p>
+
+- 손실함수로는 Log-ratio loss 활용
+
+<p align="center">
+  <img src="images/model_2.PNG" width=40% height=40%>
+</p>
+
+
+### 모델 실행 방법 설명
+- 여기 설명
+
+### 실행 결과
 - 실행 결과 (correlation)
