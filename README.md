@@ -85,8 +85,12 @@
   <img src="images/swir_reduce.PNG" width=50% height=50%>
 </p>
 
-- [비디오 전처리](preprocess_video.ipynb)
-- 실행 방법 설명
+- [비디오 전처리](preprocess_video.ipynb): 비디오를 구성하는 이미지 개수를 20개로 통일하게 위해 무작위 선택을 적용함.
+
+<p align="center">
+  <img src="images/video_change.png" width=50% height=50%>
+</p>
+
 
 ## 5. 모델 학습 (TODO)
 ### 심층 메트릭 학습을 통한 이미지 유사도 학습
