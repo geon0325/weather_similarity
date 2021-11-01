@@ -100,12 +100,6 @@
   <img src="images/model_1.PNG" width=50% height=50%>
 </p>
 
-- 손실함수로는 [Log-Ratio Loss](https://openaccess.thecvf.com/content_CVPR_2019/papers/Kim_Deep_Metric_Learning_Beyond_Binary_Supervision_CVPR_2019_paper.pdf) 활용
-
-<p align="center">
-  <img src="images/model_2.PNG" width=35% height=35%>
-</p>
-
 ### 학습 / 검증 / 평가 데이터
 #### 데이터 다운로드
 - **2013년 1월 1일 00시 00분**부터 **2013년 1월 7일 23시 45분**까지의 **전처리된** 567개의 영상 
@@ -133,7 +127,21 @@ unzip images.zip
 ```
 
 ### 모델 실행 방법 설명
-- 여기 설명
+- 모델 구조는 다음과 같이 설계:
+1. 각 채널 이미지를 [flatten](https://pytorch.org/docs/stable/generated/torch.flatten.html)하여 112,500차원 벡터로 표현.
+2. 채널별로 독립적인 인코더를 통과하여 32차원 벡터로 표현.
+3. 채널별 벡터를 [concatenate](https://pytorch.org/docs/stable/generated/torch.cat.html)하여 이미지를 128차원 벡터로 표현.
+4. 20개의 이미지를 [mean](https://pytorch.org/docs/stable/generated/torch.mean.html)하여 영상을 128차원 벡터로 표현.
+
+<p align="center">
+  <img src="images/model_architecture.PNG" width=40% height=40%>
+</p>
+
+- 손실함수로는 [Log-Ratio Loss](https://openaccess.thecvf.com/content_CVPR_2019/papers/Kim_Deep_Metric_Learning_Beyond_Binary_Supervision_CVPR_2019_paper.pdf) 활용
+
+<p align="center">
+  <img src="images/model_2.PNG" width=35% height=35%>
+</p>
 
 ### 실행 결과
 - 학습에 따른 **손실 (loss)** 변화
