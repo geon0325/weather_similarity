@@ -79,6 +79,8 @@
   <img src="images/model_2.PNG" width=40% height=40%>
 </p>
 
+### 학습 / 검증 / 평가 데이터
+- 
 
 ### 모델 실행 방법 설명
 - 여기 설명
