@@ -136,4 +136,15 @@ unzip images.zip
 - 여기 설명
 
 ### 실행 결과
-- 실행 결과 (correlation)
+- 학습에 따른 **손실 (loss)** 변화
+<p align="center">
+  <img src="images/model_loss.PNG" width=32% height=32%>
+</p>
+
+- 영상 간의 유사도와 벡터 간의 거리 간의 **연관도 (Pearson Correlation)**
+- (**왼쪽**) 학습에 활용한 영상의 쌍의 연관도 = **-0.975**
+- (**오른쪽**) 학습에 활용하지 않은 영상의 쌍의 연관도 = **-0.955**
+<p align="center">
+  <img src="images/model_corr_train.PNG" width=32% height=32% hspace="70">
+  <img src="images/model_corr_test.PNG" width=32% height=32%>
+</p>
