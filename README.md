@@ -79,7 +79,8 @@
 ```
 
 ## 4. 전처리 (TODO)
-- [이미지 전처리](preprocess_image.ipynb)
+- [이미지 전처리](preprocess_image.ipynb): 이미지 너비 및 높이 모두 300 이상이 되는 최소한의 크기로 줄임.
+
 - [비디오 전처리](preprocess_video.ipynb)
 - 실행 방법 설명
 
