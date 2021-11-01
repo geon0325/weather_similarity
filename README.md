@@ -183,4 +183,4 @@ trained_model = torch.load(os.path.join('models', 'model_ep_100.pt'))
   <img src="images/model_corr_test.PNG" width=32% height=32%>
 </p>
 
-- [평가 코드](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/evaluate.ipynb)를 통해 구체적으로 확인
+- [평가 코드](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/evaluate.ipynb)를 
