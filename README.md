@@ -73,7 +73,7 @@
   <img src="images/model_1.PNG" width=60% height=60%>
 </p>
 
-- 손실함수로는 Log-ratio loss 활용
+- 손실함수로는 [Log-Ratio Loss](https://openaccess.thecvf.com/content_CVPR_2019/papers/Kim_Deep_Metric_Learning_Beyond_Binary_Supervision_CVPR_2019_paper.pdf) 활용
 
 <p align="center">
   <img src="images/model_2.PNG" width=40% height=40%>
