@@ -99,7 +99,15 @@
 ```
 unzip images.zip
 ```
-- 각 영상은 20개의 이미지의 배열로 구성됨. [video2image.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/video2image.txt)는 
+- i-번째 이미지는 ```images/image_[i]```에 폴더에 저장됨.
+- 각 영상을 구성하는 20장의 이미지 배열을 [video2image.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/video2image.txt)에서 확인:
+```
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+...
+566,567,568,569,570,571,573,574,575,576,577,578,579,580,581,582,583,584,585,586
+567,568,569,570,571,572,573,574,575,576,577,578,579,580,582,583,584,585,586,587
+```
 - 567개의 영상을 **20:20:60**의 비율로 학습 데이터 ([train.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/train.txt)), 검증 데이터 ([valid.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/valid.txt)), 평가 데이터 ([test.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/test.txt)) 
 
 ### 모델 실행 방법 설명
