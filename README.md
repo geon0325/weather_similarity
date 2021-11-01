@@ -100,6 +100,22 @@
   <img src="images/model_1.PNG" width=50% height=50%>
 </p>
 
+- 모델 구조는 다음과 같이 설계:
+1. 각 채널 이미지를 [flatten](https://pytorch.org/docs/stable/generated/torch.flatten.html)하여 112,500차원 벡터로 표현.
+2. 채널별로 독립적인 인코더를 통과하여 32차원 벡터로 표현.
+3. 채널별 벡터를 [concatenate](https://pytorch.org/docs/stable/generated/torch.cat.html)하여 이미지를 128차원 벡터로 표현.
+4. 20개의 이미지를 [mean](https://pytorch.org/docs/stable/generated/torch.mean.html)하여 영상을 128차원 벡터로 표현.
+
+<p align="center">
+  <img src="images/model_architecture.PNG" width=40% height=40%>
+</p>
+
+- 손실함수로는 [Log-Ratio Loss](https://openaccess.thecvf.com/content_CVPR_2019/papers/Kim_Deep_Metric_Learning_Beyond_Binary_Supervision_CVPR_2019_paper.pdf) 활용
+
+<p align="center">
+  <img src="images/model_2.PNG" width=35% height=35%>
+</p>
+
 ### 학습 / 검증 / 평가 데이터
 #### 데이터 다운로드
 - **2013년 1월 1일 00시 00분**부터 **2013년 1월 7일 23시 45분**까지의 **전처리된** 567개의 영상 
@@ -127,21 +143,15 @@ unzip images.zip
 ```
 
 ### 모델 실행 방법 설명
-- 모델 구조는 다음과 같이 설계:
-1. 각 채널 이미지를 [flatten](https://pytorch.org/docs/stable/generated/torch.flatten.html)하여 112,500차원 벡터로 표현.
-2. 채널별로 독립적인 인코더를 통과하여 32차원 벡터로 표현.
-3. 채널별 벡터를 [concatenate](https://pytorch.org/docs/stable/generated/torch.cat.html)하여 이미지를 128차원 벡터로 표현.
-4. 20개의 이미지를 [mean](https://pytorch.org/docs/stable/generated/torch.mean.html)하여 영상을 128차원 벡터로 표현.
-
-<p align="center">
-  <img src="images/model_architecture.PNG" width=40% height=40%>
-</p>
-
-- 손실함수로는 [Log-Ratio Loss](https://openaccess.thecvf.com/content_CVPR_2019/papers/Kim_Deep_Metric_Learning_Beyond_Binary_Supervision_CVPR_2019_paper.pdf) 활용
-
-<p align="center">
-  <img src="images/model_2.PNG" width=35% height=35%>
-</p>
+- [sample_code](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code) 폴더에 있는 [main.py](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/main.py)를 실행
+- 실행 방법:
+```
+python main.py --epochs [학습횟수] --dim [벡터 차원] --learning_rate [학습률] --batch_size [배치 크기] --video_size [영상 길이] --log_path [로그 저장로] --gpu [GPU 번호] --N [격자 개수] --B [분포구간 개수]
+```
+- 실행 예시:
+```
+python main.py --epochs 100 --dim 128 --learning_rate 1e-5 --batch_size 32 --video_size 20 --log_path log.txt --gpu 0 --N 24 --B 20
+```
 
 ### 실행 결과
 - 학습에 따른 **손실 (loss)** 변화
