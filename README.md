@@ -103,27 +103,29 @@
 </p>
 
 ### 학습 / 검증 / 평가 데이터
+#### 데이터 다운로드
 - **2013년 1월 1일 00시 00분**부터 **2013년 1월 7일 23시 45분**까지의 567개의 영상 
 - 이미지를 [구글 드라이브](https://drive.google.com/file/d/1ct4O3C5-gJUBp7j2AxSdM3-2KQIuUXNy/view?usp=sharing)에서 다운로드하여 [sample_code](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/)에 옮긴 후 압축해제:
 ```
 unzip images.zip
 ```
 - i-번째 이미지는 ```images/image_[i]```에 폴더에 저장됨.
+
+#### 데이터 이해
 - 각 영상을 구성하는 20장의 이미지 배열을 [video2image.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/video2image.txt)에서 확인:
 ```
-1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
-...
-566,567,568,569,570,571,573,574,575,576,577,578,579,580,581,582,583,584,585,586
-567,568,569,570,571,572,573,574,575,576,577,578,579,580,582,583,584,585,586,587
+예시:
+19,20,21,22,23,24,25,27,28,29,30,31,32,33,34,35,36,38,39,40
+20,21,22,23,24,25,26,28,29,30,31,32,33,34,35,36,37,38,39,40
+21,22,23,24,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41
 ```
-- 567개의 영상을 **20:20:60**의 비율로 학습 데이터 ([train.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/train.txt)), 검증 데이터 ([valid.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/valid.txt)), 평가 데이터 ([test.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/test.txt)) 
-- 각 데이터는 ```[영상 1]<tab>[영상 2]<tab>[영상 3]<tab>[영상 1과 영상 2의 유사도]<tab>[영상 1과 영상 3의 유사도]``` 형태로 표현됨:
+- 567개의 영상을 **20:20:60**의 비율로 나눈 학습 데이터 ([train.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/train.txt)), 검증 데이터 ([valid.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/valid.txt)), 평가 데이터 ([test.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/test.txt)) 
+- 각 데이터는 ```[영상 1]<tab>[영상 2]<tab>[영상 3]<tab>[영상 1과 영상 2의 유사도]<tab>[영상 1과 영상 3의 유사도]``` 형태로 표현되어 있음:
 ```
-384	380	60	0.89016	0.481642
-63	59	443	0.864789	0.437944
-39	47	302	0.81809	0.485667
-...
+예시:
+350	347	383	0.891016	0.541287
+498	499	95	0.954669	0.439012
+80	84	81	0.832623	0.925232
 ```
 
 ### 모델 실행 방법 설명
