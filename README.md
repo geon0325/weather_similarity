@@ -99,12 +99,12 @@
 - 손실함수로는 [Log-Ratio Loss](https://openaccess.thecvf.com/content_CVPR_2019/papers/Kim_Deep_Metric_Learning_Beyond_Binary_Supervision_CVPR_2019_paper.pdf) 활용
 
 <p align="center">
-  <img src="images/model_2.PNG" width=40% height=40%>
+  <img src="images/model_2.PNG" width=35% height=35%>
 </p>
 
 ### 학습 / 검증 / 평가 데이터
 #### 데이터 다운로드
-- **2013년 1월 1일 00시 00분**부터 **2013년 1월 7일 23시 45분**까지의 567개의 영상 
+- **2013년 1월 1일 00시 00분**부터 **2013년 1월 7일 23시 45분**까지의 **전처리된** 567개의 영상 
 - 이미지를 [구글 드라이브](https://drive.google.com/file/d/1ct4O3C5-gJUBp7j2AxSdM3-2KQIuUXNy/view?usp=sharing)에서 다운로드하여 [sample_code](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/)에 옮긴 후 압축해제:
 ```
 unzip images.zip
@@ -112,7 +112,7 @@ unzip images.zip
 - i-번째 이미지는 ```images/image_[i]```에 폴더에 저장됨.
 
 #### 데이터 이해
-- 각 영상을 구성하는 20장의 이미지 배열을 [video2image.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/video2image.txt)에서 확인:
+- 각 영상을 구성하는 20장의 이미지 ([video2image.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/video2image.txt)):
 ```
 예시:
 19,20,21,22,23,24,25,27,28,29,30,31,32,33,34,35,36,38,39,40
@@ -120,7 +120,7 @@ unzip images.zip
 21,22,23,24,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41
 ```
 - 567개의 영상을 **20:20:60**의 비율로 나눈 학습 데이터 ([train.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/train.txt)), 검증 데이터 ([valid.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/valid.txt)), 평가 데이터 ([test.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/test.txt)) 
-- 각 데이터는 ```[영상 1]<tab>[영상 2]<tab>[영상 3]<tab>[영상 1과 영상 2의 유사도]<tab>[영상 1과 영상 3의 유사도]``` 형태로 표현되어 있음:
+- 각 데이터는 ```[영상 1]<tab>[영상 2]<tab>[영상 3]<tab>[영상 1과 영상 2의 유사도]<tab>[영상 1과 영상 3의 유사도]``` 형태:
 ```
 예시:
 350	347	383	0.891016	0.541287
