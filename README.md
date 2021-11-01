@@ -34,6 +34,7 @@
     1. 유효한 이미지 분포 파악
     2. 관측 주기에 관한 분포 분석
     3. 6시간 길이의 비디오를 구성하기에 적절한 이미지 개수 분석
+    
 <p align="center">
   <img src="images/관측주기_분포.PNG" width=50%>
 </p>
@@ -78,8 +79,8 @@
 ```
 
 ## 4. 전처리 (TODO)
-- 이미지 전처리 설명
-- 비디오 전처리 설명
+- [이미지 전처리](preprocess_image.ipynb)
+- [비디오 전처리](preprocess_video.ipynb)
 - 실행 방법 설명
 
 ## 5. 모델 학습 (TODO)
