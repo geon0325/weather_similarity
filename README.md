@@ -91,7 +91,13 @@
 </p>
 
 ### 학습 / 검증 / 평가 데이터
-- 
+- **2013년 1월 1일 00시 00분**부터 **2013년 1월 7일 23시 45분**까지의 567개의 영상 
+- 이미지를 [구글 드라이브](https://drive.google.com/file/d/1ct4O3C5-gJUBp7j2AxSdM3-2KQIuUXNy/view?usp=sharing)에서 다운로드하여 [sample_code](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/)에 옮긴 후 압축해제:
+```
+unzip images.zip
+```
+- 각 영상은 20개의 이미지의 배열로 구성됨. [video2image.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/video2image.txt)는 
+- 567개의 영상을 **20:20:60**의 비율로 학습 데이터 ([train.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/train.txt)), 검증 데이터 ([valid.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/valid.txt)), 평가 데이터 ([test.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/test.txt)) 
 
 ### 모델 실행 방법 설명
 - 여기 설명
