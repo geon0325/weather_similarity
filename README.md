@@ -30,7 +30,7 @@
 
 - 데이터셋 링크: NAS 링크
 
-- [데이터셋 분석](analyze_COMS.ipynb)
+- [데이터셋 분석](Analyze_COMS.ipynb)
 
 ## 3. 유사도 지표
 ### 영상 유사도 지표: 격자 기반 정렬
