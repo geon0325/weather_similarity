@@ -88,7 +88,7 @@
 - [비디오 전처리](preprocess_video.ipynb): 비디오를 구성하는 이미지 개수를 20개로 통일하게 위해 무작위 선택을 적용함.
 
 <p align="center">
-  <img src="images/video_change.png" width=50% height=50%>
+  <img src="images/video_change.png" width=80% height=80%>
 </p>
 
 
