@@ -84,7 +84,7 @@
 - 이미지 간의 유사도가 다차원 영상 벡터 간의 유사도에서 유지되도록 학습
 
 <p align="center">
-  <img src="images/model_1.PNG" width=60% height=60%>
+  <img src="images/model_1.PNG" width=50% height=50%>
 </p>
 
 - 손실함수로는 [Log-Ratio Loss](https://openaccess.thecvf.com/content_CVPR_2019/papers/Kim_Deep_Metric_Learning_Beyond_Binary_Supervision_CVPR_2019_paper.pdf) 활용
@@ -109,6 +109,13 @@ unzip images.zip
 567,568,569,570,571,572,573,574,575,576,577,578,579,580,582,583,584,585,586,587
 ```
 - 567개의 영상을 **20:20:60**의 비율로 학습 데이터 ([train.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/train.txt)), 검증 데이터 ([valid.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/valid.txt)), 평가 데이터 ([test.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/test.txt)) 
+- 각 데이터는 ```[영상 1]<tab>[영상 2]<tab>[영상 3]<tab>[영상 1과 영상 2의 유사도]<tab>[영상 1과 영상 3의 유사도]``` 형태로 표현됨:
+```
+384	380	60	0.89016	0.481642
+63	59	443	0.864789	0.437944
+39	47	302	0.81809	0.485667
+...
+```
 
 ### 모델 실행 방법 설명
 - 여기 설명
