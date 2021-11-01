@@ -79,7 +79,7 @@
 ```
 
 ## 4. 전처리 (TODO)
-- [이미지 전처리](preprocess_image.ipynb): 이미지 너비 및 높이 모두 300 이상이 되는 최소한의 크기로 줄임.
+- [이미지 전처리](preprocess_image.ipynb): 이미지 너비 및 높이 모두 300 픽셀 이상이 되는 최소한의 크기로 줄임.
 
 <p align="center">
   <img src="images/swir_reduce.PNG" width=50% height=50%>
