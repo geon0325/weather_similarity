@@ -197,7 +197,7 @@ trained_model = torch.load(os.path.join('models', 'model_ep_100.pt'))
 ### 실행 결과
 - 학습에 따른 **손실 (loss)** 변화
 <p align="center">
-  <img src="images/model_loss.PNG" width=32% height=32%>
+  <img src="images/model_loss.PNG" width=37% height=37%>
 </p>
 
 - 영상 간의 유사도와 벡터 간의 거리 간의 **연관도 (Pearson Correlation)**
