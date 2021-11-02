@@ -38,7 +38,7 @@
 
 - 데이터셋 링크: NAS 링크
 
-- [데이터셋 분석](Analyze_COMS.ipynb)
+- 데이터셋 분석 [(jupyternotebook)](Analyze_COMS.ipynb)
     1. 유효한 이미지 분포 파악
     2. 관측 주기에 관한 분포 분석
     3. 6시간 길이의 비디오를 구성하기에 적절한 이미지 개수 분석
@@ -85,13 +85,13 @@
 ```
 
 ## 4. 전처리
-- [이미지 전처리](preprocess_image.ipynb): 이미지 너비 및 높이 모두 300 픽셀 이상이 되는 최소한의 크기로 줄임.
+- 이미지 전처리 [(jupyternotebook)](preprocess_image.ipynb): 이미지 너비 및 높이 모두 300 픽셀 이상이 되는 최소한의 크기로 줄임.
 
 <p align="center">
   <img src="images/swir_reduce.PNG" width=50% height=50%>
 </p>
 
-- [비디오 전처리](preprocess_video.ipynb): 비디오를 구성하는 이미지 개수를 20개로 통일하게 위해 무작위 선택을 적용함.
+- 비디오 전처리 [(jupyternotebook)](preprocess_video.ipynb): 비디오를 구성하는 이미지 개수를 20개로 통일하게 위해 무작위 선택을 적용함.
 
 <p align="center">
   <img src="images/video_change.png" width=80% height=80%>
