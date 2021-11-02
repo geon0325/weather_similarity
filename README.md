@@ -18,14 +18,20 @@
 
 ## 2. 데이터셋
 
-- COMS 위성 이미지 예시:
+### COMS 위성 이미지 예시
 
+COMS 위성에서 4개의 다른 채널이 보여주는 이미지 예시
+
+<p align="left">
   <img src="raw_images/201103030645_image/coms_mi_le1b_ir01_ea040ps_201103030645.png" width=15% height=15%>
   <img src="raw_images/201103030645_image/coms_mi_le1b_ir02_ea040ps_201103030645.png" width=15% height=15%>
   <img src="raw_images/201103030645_image/coms_mi_le1b_swir_ea040ps_201103030645.png" width=15% height=15%>
   <img src="raw_images/201103030645_image/coms_mi_le1b_wv_ea040ps_201103030645.png" width=15% height=15%>
+</p>
 
-- 데이터셋 설명 표:
+### 데이터셋 설명 표
+
+모든 위성 데이터에 대해 살펴본 결과를 다음과 같이 정리함.
 
 |위성|파일 크기|기간|채널 종류|관측 주기|이미지 크기|이미지파일 형태|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
@@ -36,12 +42,17 @@
 |MTSAT1R|64GB|2010-2014|4|35분-1시간|(1300,1500,3)|png|
 |MTSAT2|445GB|2010-2015|4|15분-1시간|(1300,1500,3)|png|
 
-- 데이터셋 링크: NAS 링크
+### 데이터셋 링크
 
-- 데이터셋 분석 [(jupyternotebook)](Analyze_COMS.ipynb)
-    1. 유효한 이미지 분포 파악
-    2. 관측 주기에 관한 분포 분석
-    3. 6시간 길이의 비디오를 구성하기에 적절한 이미지 개수 분석
+NAS 링크
+
+### 데이터셋 분석 
+
+COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드를 제공함 [(jupyternotebook)](Analyze_COMS.ipynb).
+
+1. 유효한 이미지 분포 파악
+2. 관측 주기에 관한 분포 분석
+3. 6시간 길이의 비디오를 구성하기에 적절한 이미지 개수 분석
     
 <img src="images/관측주기_분포.PNG" width=50%>
 
