@@ -19,12 +19,11 @@
 ## 2. 데이터셋
 
 - COMS 위성 이미지 예시:
-<p align="center">
+
   <img src="raw_images/201103030645_image/coms_mi_le1b_ir01_ea040ps_201103030645.png" width=15% height=15%>
   <img src="raw_images/201103030645_image/coms_mi_le1b_ir02_ea040ps_201103030645.png" width=15% height=15%>
   <img src="raw_images/201103030645_image/coms_mi_le1b_swir_ea040ps_201103030645.png" width=15% height=15%>
   <img src="raw_images/201103030645_image/coms_mi_le1b_wv_ea040ps_201103030645.png" width=15% height=15%>
-</p>
 
 - 데이터셋 설명 표:
 
@@ -44,9 +43,7 @@
     2. 관측 주기에 관한 분포 분석
     3. 6시간 길이의 비디오를 구성하기에 적절한 이미지 개수 분석
     
-<p align="center">
-  <img src="images/관측주기_분포.PNG" width=50%>
-</p>
+<img src="images/관측주기_분포.PNG" width=50%>
 
 ## 3. 유사도 지표
 ### 영상 유사도 지표: 격자 기반 정렬
