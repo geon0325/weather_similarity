@@ -126,10 +126,10 @@ COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드�
 </p>
 
 - 모델 구조는 다음과 같이 설계:
-1. 각 채널 이미지를 [flatten](https://pytorch.org/docs/stable/generated/torch.flatten.html)하여 112,500차원 벡터로 표현.
-2. 채널별로 독립적인 인코더를 통과하여 32차원 벡터로 표현.
-3. 채널별 벡터를 [concatenate](https://pytorch.org/docs/stable/generated/torch.cat.html)하여 이미지를 128차원 벡터로 표현.
-4. 20개의 이미지를 [mean](https://pytorch.org/docs/stable/generated/torch.mean.html)하여 영상을 128차원 벡터로 표현.
+  1. 각 채널 이미지를 [flatten](https://pytorch.org/docs/stable/generated/torch.flatten.html)하여 112,500차원 벡터로 표현.
+  2. 채널별로 독립적인 인코더를 통과하여 32차원 벡터로 표현.
+  3. 채널별 벡터를 [concatenate](https://pytorch.org/docs/stable/generated/torch.cat.html)하여 이미지를 128차원 벡터로 표현.
+  4. 20개의 이미지를 [mean](https://pytorch.org/docs/stable/generated/torch.mean.html)하여 영상을 128차원 벡터로 표현.
 
 <p align="center">
   <img src="images/model_architecture.PNG" width=40% height=40%>
@@ -201,8 +201,8 @@ trained_model = torch.load(os.path.join('models', 'model_ep_100.pt'))
 </p>
 
 - 영상 간의 유사도와 벡터 간의 거리 간의 **연관도 (Pearson Correlation)**
-- (**왼쪽**) 학습에 활용한 영상의 쌍의 연관도 = **-0.975**
-- (**오른쪽**) 학습에 활용하지 않은 영상의 쌍의 연관도 = **-0.955**
+  - (**왼쪽**) 학습에 활용한 영상의 쌍의 연관도 = **-0.975**
+  - (**오른쪽**) 학습에 활용하지 않은 영상의 쌍의 연관도 = **-0.955**
 <p align="center">
   <img src="images/model_corr_train.PNG" width=32% height=32% hspace="70">
   <img src="images/model_corr_test.PNG" width=32% height=32%>
