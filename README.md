@@ -126,10 +126,10 @@ COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드�
 </p>
 
 - 모델 구조는 다음과 같이 설계:
-  1. 각 채널 이미지를 [flatten](https://pytorch.org/docs/stable/generated/torch.flatten.html)하여 112,500차원 벡터로 표현.
-  2. 채널별로 독립적인 인코더를 통과하여 32차원 벡터로 표현.
-  3. 채널별 벡터를 [concatenate](https://pytorch.org/docs/stable/generated/torch.cat.html)하여 이미지를 128차원 벡터로 표현.
-  4. 20개의 이미지를 [mean](https://pytorch.org/docs/stable/generated/torch.mean.html)하여 영상을 128차원 벡터로 표현.
+1. 각 채널 이미지를 [flatten](https://pytorch.org/docs/stable/generated/torch.flatten.html)하여 112,500차원 벡터로 표현.
+2. 채널별로 독립적인 인코더를 통과하여 32차원 벡터로 표현.
+3. 채널별 벡터를 [concatenate](https://pytorch.org/docs/stable/generated/torch.cat.html)하여 이미지를 128차원 벡터로 표현.
+4. 20개의 이미지를 [mean](https://pytorch.org/docs/stable/generated/torch.mean.html)하여 영상을 128차원 벡터로 표현.
 
 <p align="center">
   <img src="images/model_architecture.PNG" width=40% height=40%>
@@ -159,8 +159,9 @@ unzip images.zip
 21,22,23,24,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41
 ```
 - 567개의 영상을 **20:20:60**의 비율로 나눈 학습 데이터 ([train.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/train.txt)), 검증 데이터 ([valid.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/valid.txt)), 평가 데이터 ([test.txt](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/test.txt)) 
-- 각 데이터는 ```[영상 1]<tab>[영상 2]<tab>[영상 3]<tab>[영상 1과 영상 2의 유사도]<tab>[영상 1과 영상 3의 유사도]``` 형태:
+- 각 데이터는 다음과 같이 표기:
 ```
+[영상 1]<tab>[영상 2]<tab>[영상 3]<tab>[영상 1과 영상 2의 유사도]<tab>[영상 1과 영상 3의 유사도]
 예시:
 350	347	383	0.891016	0.541287
 498	499	95	0.954669	0.439012
@@ -168,31 +169,35 @@ unzip images.zip
 ```
 
 ### 모델 실행 방법 설명
-- [sample_code](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code) 폴더에 있는 [main.py](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/main.py)를 실행
-- 실행 방법:
-```
-python main.py --epochs [학습횟수] --dim [벡터 차원] --learning_rate [학습률] --batch_size [배치 크기] --video_size [영상 길이] --log_path [로그 저장로] --gpu [GPU 번호] --N [격자 개수] --B [분포구간 개수]
-```
-- 실행 예시:
-```
-python main.py --epochs 100 --dim 128 --learning_rate 1e-5 --batch_size 32 --video_size 20 --log_path log.txt --gpu 0 --N 24 --B 20
-```
-- 실행 결과 1: 로그 저장로에 다음과 같이 학습 추이 기록
-```
-기록 예시:
-epoch	1
-loss	0.6586444973945618
-runtime	5.312704086303711
+- **실행 방법**: [sample_code](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code) 폴더에 있는 [main.py](https://github.com/geonlee0325/weather_similarity/blob/main/sample_code/main.py)를 실행
+  
+  - 실행 방법:
+  ```
+  python main.py --epochs [학습횟수] --dim [벡터 차원] --learning_rate [학습률] --batch_size [배치 크기] --video_size [영상 길이] --log_path [로그 저장로] --gpu [GPU 번호] --N [격자 개수] --B [분포구간 개수]
+  ```
+  
+  - 실행 예시:
+  ```
+  python main.py --epochs 100 --dim 128 --learning_rate 1e-5 --batch_size 32 --video_size 20 --log_path log.txt --gpu 0 --N 24 --B 20
+  ```
 
-epoch	2
-loss	0.2081376053392887
-runtime	4.766304016113281
-```
-- 실행 결과 2: models 폴더에 학습된 모델 저장
-```
-모델 로드 예시:
-trained_model = torch.load(os.path.join('models', 'model_ep_100.pt'))
-```
+- **실행 결과**
+  - 결과 1: 로그 저장로에 다음과 같이 학습 추이 기록
+  ```
+  기록 예시:
+  epoch	1
+  loss	0.6586444973945618
+  runtime	5.312704086303711
+
+  epoch	2
+  loss	0.2081376053392887
+  runtime	4.766304016113281
+  ```
+  - 결과 2: models 폴더에 학습된 모델 저장
+  ```
+  모델 로드 예시:
+  trained_model = torch.load(os.path.join('models', 'model_ep_100.pt'))
+  ```
 
 ### 실행 결과
 - 학습에 따른 **손실 (loss)** 변화
