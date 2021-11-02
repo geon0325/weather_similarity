@@ -48,7 +48,7 @@ NAS 링크
 
 ### 데이터셋 분석 
 
-COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드를 제공함 [(jupyternotebook)](Analyze_COMS.ipynb).
+COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드를 제공함 [(jupyternotebook)](data/Analyze_COMS.ipynb).
 
 1. 유효한 이미지 분포 파악
 2. 관측 주기에 관한 분포 분석
@@ -100,7 +100,7 @@ COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드�
 ### 이미지 전처리 
  
 * 이미지 너비 및 높이 모두 300 픽셀 이상이 되는 최소한의 크기로 줄임.
-* 줄이고자 하는 이미지를 *rawdatapath* 로 지정한 뒤, 줄여진 이미지를 저장할 폴더를 *outputpath*로 지정하여 줄일 수 있는 코드를 제공함 [(jupyternotebook)](preprocess_image.ipynb).
+* 줄이고자 하는 이미지를 *rawdatapath* 로 지정한 뒤, 줄여진 이미지를 저장할 폴더를 *outputpath*로 지정하여 줄일 수 있는 코드를 제공함 [(jupyternotebook)](preprocess/preprocess_image.ipynb).
 * 예시로, [Raw Image](raw_images/201103030645_image/) 를 줄여 [Reduced Image](reduced_images/201103030645_image/) 로 저장함.
 
 <p align="center">
@@ -110,7 +110,7 @@ COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드�
 ### 비디오 전처리
 
 * 비디오를 구성하는 이미지 개수를 20개로 통일하게 위해 무작위 선택을 적용함.
-* 예시로, [RawImages](raw_images/) 폴더에 있는 이미지로 6시간 길이의 비디오를 생성하는 방식의 코드를 제공함 [(jupyternotebook)](preprocess_video.ipynb).
+* 예시로, [RawImages](raw_images/) 폴더에 있는 이미지로 6시간 길이의 비디오를 생성하는 방식의 코드를 제공함 [(jupyternotebook)](preprocess/preprocess_video.ipynb).
 
 <p align="center">
   <img src="images/video_change.png" width=80% height=80%>
