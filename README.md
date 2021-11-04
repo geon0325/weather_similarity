@@ -23,10 +23,10 @@
 COMS 위성에서 4개의 다른 채널이 보여주는 이미지 예시
 
 <p align="left">
-  <img src="raw_images/201103030645_image/coms_mi_le1b_ir01_ea040ps_201103030645.png" width=15% height=15%>
-  <img src="raw_images/201103030645_image/coms_mi_le1b_ir02_ea040ps_201103030645.png" width=15% height=15%>
-  <img src="raw_images/201103030645_image/coms_mi_le1b_swir_ea040ps_201103030645.png" width=15% height=15%>
-  <img src="raw_images/201103030645_image/coms_mi_le1b_wv_ea040ps_201103030645.png" width=15% height=15%>
+  <img src="preprocess/raw_images/201103030645_image/coms_mi_le1b_ir01_ea040ps_201103030645.png" width=15% height=15%>
+  <img src="preprocess/raw_images/201103030645_image/coms_mi_le1b_ir02_ea040ps_201103030645.png" width=15% height=15%>
+  <img src="preprocess/raw_images/201103030645_image/coms_mi_le1b_swir_ea040ps_201103030645.png" width=15% height=15%>
+  <img src="preprocess/raw_images/201103030645_image/coms_mi_le1b_wv_ea040ps_201103030645.png" width=15% height=15%>
 </p>
 
 ### 데이터셋 설명 표
@@ -101,7 +101,7 @@ COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드�
  
 * 이미지 너비 및 높이 모두 300 픽셀 이상이 되는 최소한의 크기로 줄임.
 * 줄이고자 하는 이미지를 *rawdatapath* 로 지정한 뒤, 줄여진 이미지를 저장할 폴더를 *outputpath*로 지정하여 줄일 수 있는 코드를 제공함 [(jupyternotebook)](preprocess/preprocess_image.ipynb).
-* 예시로, [Raw Image](raw_images/201103030645_image/) 를 줄여 [Reduced Image](reduced_images/201103030645_image/) 로 저장함.
+* 예시로, [Raw Image](preprocess/raw_images/201103030645_image/) 를 줄여 [Reduced Image](preprocess/reduced_images/201103030645_image/) 로 저장함.
 
 <p align="center">
   <img src="images/swir_reduce.PNG" width=50% height=50%>
@@ -110,7 +110,7 @@ COMS 위성 이미지 파일을 예시로, 데이터셋 분석을 위한 코드�
 ### 비디오 전처리
 
 * 비디오를 구성하는 이미지 개수를 20개로 통일하게 위해 무작위 선택을 적용함.
-* 예시로, [RawImages](raw_images/) 폴더에 있는 이미지로 6시간 길이의 비디오를 생성하는 방식의 코드를 제공함 [(jupyternotebook)](preprocess/preprocess_video.ipynb).
+* 예시로, [RawImages](preprocess/raw_images/) 폴더에 있는 이미지로 6시간 길이의 비디오를 생성하는 방식의 코드를 제공함 [(jupyternotebook)](preprocess/preprocess_video.ipynb).
 
 <p align="center">
   <img src="images/video_change.png" width=80% height=80%>
