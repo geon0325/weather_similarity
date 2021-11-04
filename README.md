@@ -44,7 +44,7 @@ COMS 위성에서 4개의 다른 채널이 보여주는 이미지 예시
 
 ### 데이터셋 링크
 
-데이터셋을 다운받을 수 있는 [링크](http://dmlab.kaist.ac.kr/weather_similarity/)를 공개함.
+전체 데이터셋은 [링크](http://dmlab.kaist.ac.kr/weather_similarity/)에서 다운로드 가능함.
 
 ### 데이터셋 분석 
 
